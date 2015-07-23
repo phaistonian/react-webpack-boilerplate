@@ -5,23 +5,23 @@ var http = require('http');
 var proxy = httpProxy.createProxyServer({
   changeOrigin: true,
   ws: true
-}); 
+});
 var app = express();
 var isProduction = process.env.NODE_ENV === 'production';
 var port = isProduction ? process.env.PORT : 3000;
-var publicPath = path.resolve(__dirname, 'public');
+var publicPath = path.resolve(__dirname, '../build');
 
 app.use(express.static(publicPath));
 
-app.all('/db/*', function (req, res) {
+app.all('/api*', function (req, res) {
   proxy.web(req, res, {
-    target: 'https://glowing-carpet-4534.firebaseio.com/'
+    target: 'http://192.168.10.250/api'
   });
 });
 
 if (!isProduction) {
 
-  var bundle = require('./server/bundle.js');
+  var bundle = require('./bundle.js');
   bundle();
   app.all('/build/*', function (req, res) {
     proxy.web(req, res, {
@@ -49,7 +49,7 @@ if (!isProduction) {
 
   server.listen(port, function () {
     console.log('Server running on port ' + port);
-  }); 
+  });
 
 } else {
 
