@@ -14,6 +14,7 @@
 
 ## ES7
 - https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841
+- https://github.com/zenparsing/es-function-bind (strawman)
 
 ## REACT
 - https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750
