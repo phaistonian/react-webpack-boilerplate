@@ -2,32 +2,34 @@ var Webpack = require('webpack');
 var path = require('path');
 var nodeModulesPath = path.resolve(__dirname, 'node_modules');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var buildPath = path.resolve(__dirname, 'dist');
-var mainPath = path.resolve(__dirname, 'app', 'app.js');
+var mainPath = path.resolve(__dirname, 'src', 'index.js');
 
 var config = {
-
   // We change to normal source mapping, if you need them
   devtool: 'source-map',
   entry: mainPath,
   output: {
-    path: buildPath,
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   module: {
     loaders : [
       {
         test: /\.css$/,
-        loader:  ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader")
+        loader:  ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader"),
+        include: path.join(__dirname, 'src')
       },
+
       {
         test: /\.styl$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!stylus-loader")
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!stylus-loader"),
+        include: path.join(__dirname, 'src')
       },
+
       {
         test: /\.jsx?$/,
         loaders: ['babel'],
-        exclude: [nodeModulesPath]
+        include: path.join(__dirname, 'src')
       }
     ]
   },

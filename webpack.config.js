@@ -1,48 +1,40 @@
 var Webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var appPath = path.resolve(__dirname, 'app');
-var nodeModulesPath = path.resolve(__dirname, 'node_modules');
-var buildPath = path.resolve(__dirname,  'build');
 
 var config = {
-  //context: __dirname,
   devtool: 'eval-source-map',
-
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/dev-server',
-    path.resolve(appPath, 'app.js')
+    './src/index.js'
   ],
-
   output: {
-    path: buildPath,
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
     publicPath: '/build/' // This HAS to point to the build path in order for hot reload to work
   },
-
   module: {
     loaders: [{
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
-      exclude: [nodeModulesPath]
+      include: path.join(__dirname, 'src')
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader!autoprefixer-loader'
+      loader: 'style-loader!css-loader!autoprefixer-loader',
+      include: path.join(__dirname, 'src')
     }, {
       test: /\.styl$/,
-      loader: 'style-loader!css-loader!autoprefixer-loader!stylus-loader'
-      }
-    ]
+      loader: 'style-loader!css-loader!autoprefixer-loader!stylus-loader',
+      include: path.join(__dirname, 'src')
+    }]
   },
-
   resolve: {
     extensions:  ['', '.js', '.json', '.css', 'styl']
   },
-
   plugins: [
     new Webpack.HotModuleReplacementPlugin(),
-      new Webpack.NoErrorsPlugin(),
+    new Webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
       title: 'My App',
       filename: 'index.html'
