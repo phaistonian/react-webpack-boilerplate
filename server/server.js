@@ -1,7 +1,7 @@
-var express = require('express');
 var path = require('path');
-var httpProxy = require('http-proxy');
 var http = require('http');
+var express = require('express');
+var httpProxy = require('http-proxy');
 var proxy = httpProxy.createProxyServer({
   changeOrigin: true,
   ws: true
@@ -52,12 +52,10 @@ if (!isProduction) {
   });
 
 } else {
-
   // And run the server
   app.listen(port, function () {
     console.log('Server running on port ' + port);
   });
-
 }
 
 
