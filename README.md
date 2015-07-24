@@ -12,6 +12,10 @@
 - *SOS* When web packing does not take place, try webpack again (run it)
 - http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup
 
+## ES6
+- http://cl.ly/image/41121J2n130g - http://d.pr/i/tl3e
+- https://hacks.mozilla.org/2015/07/es6-in-depth-classes/?utm_source=javascriptweekly&utm_medium=email
+
 ## ES7
 - https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841
 - https://github.com/zenparsing/es-function-bind (strawman)
@@ -22,6 +26,7 @@
 ## Redux
 - https://github.com/gaearon/redux#simple-examples
 - https://github.com/gaearon/redux/tree/rewrite-docs
+- https://github.com/quangbuule/redux-example
 - https://github.com/gaearon/redux/blob/rewrite-docs/docs/Reference/Glossary.md (glossary)
 
 ## Misc
