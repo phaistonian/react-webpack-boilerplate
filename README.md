@@ -36,6 +36,12 @@ Hello, world
 
 ## CSS
 
+### misc rules
+- Animate everything
+
+### global
+- loading (data-loading)
+
 ### Vars
 
 * $input-border-radius
