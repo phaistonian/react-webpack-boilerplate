@@ -13,7 +13,7 @@ var publicPath = path.resolve(__dirname, '../build');
 
 app.use(express.static(publicPath));
 
-app.all('/api*', function (req, res) {
+app.all('/api/*', function (req, res) {
   proxy.web(req, res, {
     target: 'http://192.168.10.250/api'
   });
