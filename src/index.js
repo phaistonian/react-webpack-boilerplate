@@ -1,20 +1,8 @@
-import React, { Component, PropTypes } from 'react';
-import Test from './Test';
-require('./app.styl');
+import React from 'react';
+import App from './containers/app';
 
-var a = {
-  ['a' + (() => 2)()] : 2
-};
+React.render(
+  <App />,
+  document.body
+);
 
-const lala = () => { console.log(this, 1); }
-
-
-console.log(Component);
-
-console.log(a);
-
-
-
-
-
-React.render(<Test />, document.body);

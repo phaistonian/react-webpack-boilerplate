@@ -13,6 +13,7 @@
 - http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup
 
 ## ES6
+- https://github.com/lukehoban/es6features#math--number--string--array--object-apis
 - http://cl.ly/image/41121J2n130g - http://d.pr/i/tl3e
 - https://hacks.mozilla.org/2015/07/es6-in-depth-classes/?utm_source=javascriptweekly&utm_medium=email
 
@@ -31,6 +32,9 @@
 - http://racingtadpole.com/blog/flux-react-best-practices/
 - https://github.com/emmenko/redux-react-router-async-example
 
+## REACT libs
+- https://github.com/gpbl/react-day-picker
+
 ## Redux
 - http://davidandsuzi.com/writing-a-basic-app-in-redux/
 - https://github.com/gaearon/redux/blob/rewrite-docs/docs/Reference/API.md
@@ -44,7 +48,11 @@
 - https://github.com/rwaldron/idiomatic.js/blob/master/readme.md
 - http://cycle.js.org/
 - https://github.com/gaearon/normalizr
+- editoconfig.org
 
+## blind spots
+- use tests?
+- use eslint?
 
 ## CSS
 
@@ -80,6 +88,10 @@
 # Testing
 - https://travis-ci.org/
 - http://karma-runner.github.io/0.13/index.html
+
+## NEW STUFF TO CHECK
+- https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
+- http://leaverou.github.io/stretchy/
 
 
 

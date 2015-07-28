@@ -18,14 +18,14 @@ export default class Test extends Component {
 
 
   tick () {
-    setInterval( () => this.setState({'test': this.state.test + 1}), 200);
+    setInterval( () => this.setState({'test': this.state.test + Math.random() * 10 }), Math.random() * 1000);
   }
 
   render() {
     return (
       <div>
         <Input placeholder="wosadasdw" />
-        <h1>hello hi world worasdks { this.state.test }</h1>
+        <h1>hello hi world worasdks {this.state.test}</h1>
       </div>
     );
   }
