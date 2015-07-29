@@ -18,6 +18,7 @@
 - https://hacks.mozilla.org/2015/07/es6-in-depth-classes/?utm_source=javascriptweekly&utm_medium=email
 
 ## ES7
+- {a, b, ...rest} = {a:1, b:2, c:3, d:4}  //ES7
 - Object.observe
 - https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841
 - https://github.com/zenparsing/es-function-bind (strawman)
@@ -34,6 +35,66 @@
 
 ## REACT libs
 - https://github.com/gpbl/react-day-picker
+
+## REDUX - MAJOR
+- https://github.com/gaearon/redux/blob/rewrite-docs/docs/Reference/Glossary.md ****SUPER***
+
+- https://github.com/gaearon/redux
+
+## REDUX 1.0 (rc)
+- https://github.com/gaearon/redux/releases/tag/v1.0.0-rc
+- npm install --save redux@1.0.0-rc
+- npm install --save react-redux
+- createRedux -> createStore
+- provider store= instead of provider redux=
+
+## REDUX Glossary
+- Actions are payloads of informations ( { type, .. })
+- ActionCreatores are functions that return actions
+- Reducers are functions that handle states (previousState, action) => new State
+
+## REDUX WORKFLOW
+1. Define (/constants) actionTypes
+2. Define (/actions) actions (actioncreators)
+3. Define (/reducers)
+
+
+## Setup provider on parent
+myStore = createStore(reducers);
+@provide(store)`
+
+This should go to topmost class to intercept stuff
+@connect(state => ({ todos: state.todos }))
+they are passed as props  (this.propsyes )
+
+
+
+
+
+## REDUX API
+
+https://github.com/gaearon/redux/blob/rewrite-docs/docs/Reference/API.md ****SUPER***
+
+### STORE API
+- createStore (reducer, initialState): store
+- getState()
+- dispatch(action)
+- subscribe(listener)
+- getReducer()
+- replaceReducer(nextReduce)
+
+- combineReducers(reducers: object)
+- applyMiddleWare(...middlewares)
+- bindActionCreators(actionCreators, dispatcch)
+
+`let boundActionCreators = bindActionCreators(actionCreators, store.dispatch);
+boundActionCreators.addTodo('Use Redux');`
+
+- commpose(functions)
+
+## REDUX PROVIDER CONNECTOR
+- ALWAYS USE DECORATORS http://d.pr/i/1bPuH (check todo app)
+
 
 ## Redux
 - http://davidandsuzi.com/writing-a-basic-app-in-redux/
@@ -129,3 +190,7 @@ Use this as an opportunity to operate on the DOM when the component has been upd
 Invoked immediately after the component’s updates are flushed to the DOM. This method is not called for the initial render.
 
 Use this as an opportunity to operate on the DOM when the component has been updated
+
+
+## AMAZING
+- https://github.com/faassen/reselect
