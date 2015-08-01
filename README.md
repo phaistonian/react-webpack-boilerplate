@@ -8,7 +8,9 @@
 
 ## guides
 
-## watchpack
+## webpack
+https://github.com/robertknight/webpack-bundle-size-analyzer
+http://survivejs.com/webpack_react/building_kanban/
 - *SOS* When web packing does not take place, try webpack again (run it)
 - http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup
 
@@ -37,6 +39,7 @@
 - https://github.com/gpbl/react-day-picker
 
 ## REDUX - MAJOR
+- http://gaearon.github.io/redux/index.html
 - https://github.com/gaearon/redux/blob/rewrite-docs/docs/Reference/Glossary.md ****SUPER***
 
 - https://github.com/gaearon/redux
@@ -53,10 +56,12 @@
 - ActionCreatores are functions that return actions
 - Reducers are functions that handle states (previousState, action) => new State
 
+
+
 ## REDUX WORKFLOW
 1. Define (/constants) actionTypes
 2. Define (/actions) actions (actioncreators)
-3. Define (/reducers)
+3. Define (/reducers) (named after data structs, eg. posts etc)
 
 
 ## Setup provider on parent
@@ -79,7 +84,7 @@ https://github.com/gaearon/redux/blob/rewrite-docs/docs/Reference/API.md ****SUP
 - createStore (reducer, initialState): store
 - getState()
 - dispatch(action)
-- subscribe(listener)
+- subscribe(listener) (used to write to localstorage)
 - getReducer()
 - replaceReducer(nextReduce)
 
@@ -103,6 +108,7 @@ boundActionCreators.addTodo('Use Redux');`
 - https://github.com/gaearon/redux/tree/rewrite-docs
 - https://github.com/quangbuule/redux-example
 - https://github.com/gaearon/redux/blob/rewrite-docs/docs/Reference/Glossary.md (glossary)
+- https://gist.github.com/gaearon/074b0905337a6a835d82
 
 ## Misc
 - http://jakearchibald.com/2015/thats-so-fetch/
@@ -119,6 +125,7 @@ boundActionCreators.addTodo('Use Redux');`
 
 ### misc rules
 - Animate everything
+- http://jake.ly/journal/animations.html
 
 ### global
 - loading (data-loading)
@@ -154,7 +161,8 @@ boundActionCreators.addTodo('Use Redux');`
 - https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
 - http://leaverou.github.io/stretchy/
 
-
+# CSS
+- http://flexbox.io/#/
 
 ## Lifecycle
 
