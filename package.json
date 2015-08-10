@@ -6,7 +6,8 @@
   "author": "George Papadakis",
   "scripts": {
     "start": "node server/server.js",
-    "deploy": "webpack -p --config webpack.production.config.js",
+    "build": "webpack -p --config webpack.production.config.js",
+    "build:stats": "webpack -p --config webpack.production.config.js --json > webpack-stats.json",
     "watch": "webpack --watch"
   },
   "keywords": [
@@ -29,7 +30,9 @@
     "open": "0.0.5",
     "react": "^0.13.3",
     "react-hot-loader": "^1.2.8",
+    "react-redux": "^0.2.2",
     "redux": "^0.12.0",
+    "redux-thunk": "^0.1.0",
     "style-loader": "^0.12.3",
     "stylus-loader": "^1.2.1",
     "webpack": "^1.10.1",
@@ -38,5 +41,8 @@
   "repository": {
     "type": "git",
     "url": "not yet"
+  },
+  "dependencies": {
+    "redux": "^1.0.0-rc"
   }
 }
