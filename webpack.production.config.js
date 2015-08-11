@@ -28,6 +28,12 @@ var config = {
       }
     ]
   },
+
+  resolve: {
+    extensions: ['', '.js', '.json', '.css', 'styl'],
+    root: './node_modules/'
+  },
+
   plugins: [
     new ExtractTextPlugin('app.css', { allChunks: true }),
     new webpack.optimize.UglifyJsPlugin(),

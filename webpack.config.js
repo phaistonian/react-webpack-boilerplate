@@ -30,7 +30,8 @@ var config = {
     }]
   },
   resolve: {
-    extensions:  ['', '.js', '.json', '.css', 'styl']
+    extensions: ['', '.js', '.json', '.css', 'styl'],
+    root: './node_modules/'
   },
   plugins: [
     new Webpack.HotModuleReplacementPlugin(),
